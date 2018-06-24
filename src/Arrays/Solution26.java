@@ -24,11 +24,28 @@ public class Solution26 {
 		
 		return  len -countAll;
 	}
+	//quick and slow pointer
+	public int removeDuplicates2(int[] nums){
+		if(nums.length == 0) return 0;
+		int i =0;
+		for(int j=1; j<nums.length; j++) {
+			if(nums[j] != nums[i]) {
+				i++;
+				swap(nums, i, j);
+			}
+		}
+		return i+1;
+	}
+	public void swap(int[] a, int i, int j) {
+		int temp = a[i];
+		a[i]=a[j];
+		a[j]=a[i];
+	}
 	public static void main(String[] args) {
 		Solution26 solution = new  Solution26();
 		int[] a = new int[]{0,0,1,1,1,2,2,3,3,4};
 		
-		System.out.println(solution.removeDuplicates(a));
+		System.out.println(solution.removeDuplicates2(a));
 		System.out.println(Arrays.toString(a));
 		
 	}
