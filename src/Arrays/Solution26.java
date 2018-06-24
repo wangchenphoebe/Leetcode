@@ -3,6 +3,7 @@ package Arrays;
 import java.util.Arrays;
 
 public class Solution26 {
+	//原地去除有序数组中的重复元素 
 	public int removeDuplicates(int[] nums){
 		int len = nums.length;
 		int countAll = 0;
