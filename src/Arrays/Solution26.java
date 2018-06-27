@@ -40,7 +40,7 @@ public class Solution26 {
 	public void swap(int[] a, int i, int j) {
 		int temp = a[i];
 		a[i]=a[j];
-		a[j]=a[i];
+		a[j]=temp;
 	}
 	public static void main(String[] args) {
 		Solution26 solution = new  Solution26();
